@@ -1,0 +1,7 @@
+Input File Name    : input.txt
+CPU Scheduling Alg : FIFO
+CPU utilization    : 100.0%
+Throughput         : 0.001138627953316254
+Turnaround Time    : 2796.25
+Waiting Time       : 1611.75
+Response Time      : 410.75
