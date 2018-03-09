@@ -25,3 +25,15 @@ A simple CPU Scheduling simulation: A multithreaded program that will allow us t
 
 1.  `java prog -alg FIFO -quantum 0 -input input.txt`
 2.  `java prog -alg RR -quantum 300 -input input.txt`
+
+### Summary:
+
+1.  CPU scheduler thread will check ready queue; if there is a process, it will pick one according to
+    the scheduling algorithm from ready queue and hold CPU resource for the given CPU burst time
+    (or for quantum time if the scheduling algorithm is RR). Then it will release CPU resource and
+    put this process into IO queue (or ready queue if RR is used) or just terminate if there is no more
+    CPU or IO burst. Then CPU scheduler thread will check ready queue again and repeat the same...
+
+2.  I/O system thread will check IO queue; if there is a process, it will hold IO device for the given
+    IO burst time and then put this process back into ready queue. Then it will check IO queue and
+    repeat the same ....
